@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "0NKvtQHz2EZtzRY81qrhh"
+uri = "file://DEPLOYMENT_GUIDE.md"
+type = "text"
+title = "Claimbase Self-Hosted Deployment Guide"

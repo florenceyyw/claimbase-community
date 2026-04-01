@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Claimbase Portal"
+version = "1.0.0"
+id = "artifacts/web-portal"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21464
+
+[services.development]
+run = "pnpm --filter @workspace/web-portal run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/web-portal", "run", "build" ]
+publicDir = "artifacts/web-portal/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21464"
+BASE_PATH = "/"

@@ -1,0 +1,13 @@
+packages:
+  "date-fns": "Human-readable date formatting and manipulation"
+  "recharts": "Dashboard analytics charts and data visualization"
+  "framer-motion": "Smooth page transitions and micro-interactions"
+  "react-hook-form": "Form state management"
+  "@hookform/resolvers": "Zod validation for forms"
+  "zod": "Strict type validation"
+
+notes:
+  - Using generated React Query hooks from @workspace/api-client-react
+  - Injecting X-Telegram-Init-Data via a window.fetch patch to satisfy backend TelegramAuth
+  - Assuming UI components exist in @/components/ui/ based on the directory structure
+  - Providing a mock Telegram auth flow for browser development
